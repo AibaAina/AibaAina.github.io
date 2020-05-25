@@ -1,0 +1,446 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Navigate bar */
+
+.navbar {
+	width: 100%;
+	position: fixed;
+}
+
+.top {
+	background: #0d1217;
+	color: #fff;
+	height: 70px;
+	display: flex;
+	opacity: 70%;
+	justify-content: flex-end;
+}
+
+nav {
+	transition: all 0.8s;
+	z-index: 10002;
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+	nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+		nav ul li{
+			margin: 0.1em;
+			padding: 0.5em;
+		}
+
+			nav ul li a{
+				color: rgba(255, 255, 255, 1);
+				text-decoration: none;
+			}
+			
+				nav ul li a:hover {
+					color: white;
+				}
+
+				nav ul li a.active {
+					color: #19B5FE;
+				}
+
+
+/* Home Page */
+
+header {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/Banner_image.png);
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/Banner_image.png);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+header h1 {
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 4em;
+	font-weight: 200;
+	padding: .5em;
+	color: #fff;
+}
+
+header h2 {
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+	font-weight: 50;
+	padding: .5em;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, .7);
+}
+
+/* scroll button */
+
+.scroll a {
+	position: absolute;
+	bottom: 2em;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	color: #fff;
+	font : normal 400 20px/1 'Josefin Sans', sans-serif;
+	letter-spacing: .1em;
+	text-decoration: none;
+	transition: opacity .3s;
+}
+
+.scroll a:hover {
+	opacity: .5;
+}
+
+#headerIndexPage a {
+	padding-top: 70px;
+}
+
+#headerIndexPage a span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
+	-webkit-animation: sdb06 1.5s infinite;
+	animation: sdb06 1.5s infinite;
+	box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb06 {
+	0% {
+		-webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
+}
+
+@keyframes sdb06 {
+	0% {
+		transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
+}
+
+
+/* front page text animtaion */
+
+.raiseAnimation {
+	animation-duration: 2s;
+	animation-name: fadein;
+}
+
+@keyframes fadein {
+	from {
+		transform: translateY(.5em);
+		opacity: 0%;
+	}
+	to {
+		transform: translateY(0em);
+		opacity: 100%;
+	}
+}
+
+
+/* section demoReel */
+
+#demoReel{
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/Banner_image.png);
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/Banner_image.png);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+
+/* Video container*/
+
+.container {
+	position: relative;
+	overflow: hidden;
+	padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+	transform: scale(0.7);
+	bottom: 3em;
+}
+
+.resp-iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	text-align:center;
+}
+
+
+/* section resume */
+
+#resume {
+	/*height: 100%;*/
+	display: flex;
+	/*justify-content: center;*/
+	align-items: left;
+	flex-direction: column;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/Banner_image.png);
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/Banner_image.png);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	
+	/*border: solid red 5px;*/
+}
+
+#resume h1 {
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+	font-weight: 200;
+	padding: .4em;
+	line-height: 1.2;
+	color: #fff;
+}
+
+#resume h2 {
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: 50;
+	padding: 2px;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, .7);
+	transform: translateX(.5em);
+}
+
+#resume h3 {
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: 50;
+	padding: 2px;
+	line-height: 1.2;
+	color: rgba(255, 255, 255, .5);
+	transform: translateX(.7em);
+}
+
+#resume h4 {
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: 50;
+	padding: 2px;
+	margin: 5px;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, .7);
+	/*border: solid red 2px;*/
+}
+
+#resume p {
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: 200;
+	padding: .5em;
+	color: rgba(255, 255, 255, .5);
+	transform: translateX(.1em);
+}
+
+#textBlock {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 1em;
+	padding: 5px;
+	margin: 1em;
+	background-color: rgba(255, 255, 255, .3);
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 2%;
+	/*border: solid red 5px;*/
+}
+
+#blankBlock {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 5px;
+	margin: 1em;
+	/*border: solid red 5px;*/
+}
+
+#blockWrap{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#textBlock #experienceBlock {
+	display: flex;
+	margin: 1em;
+	/*border: solid red 2px;*/
+}
+
+#textBlock #softwareBlock img{
+	width: 4em;
+	height: 4em;
+	border-radius: .6em;
+	padding: 5px;
+	border: 2px;
+}
+
+#textBlock #experienceBlock img{
+	width: 7em;
+	height: 7em;
+	border-radius: 2em;
+	padding: 5px;
+	/*border: solid red 2px;*/
+}
+
+#textBlock #experienceBlock #experienceTextBlock {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transform: translateY(-.0em);
+	padding: 2px;
+	/*border: solid red 2px;*/
+}
+
+
+/* section aboutMe */
+
+#aboutMe {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/Banner_image.png);
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/Banner_image.png);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+#aboutMe h1 {
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 2.5em;
+	font-weight: 200;
+	padding: .5em;
+	color: #fff;
+}
+
+#aboutMe h2 {
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	font-weight: 50;
+	padding: .5em;
+	line-height: 2;
+	color: rgba(255, 255, 255, .7);
+	text-align: center;
+}
+
+#aboutMe h3 {
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: 200;
+	padding: .5em;
+	transform: translateY(-1em);
+	color: rgba(255, 255, 255, .5);
+}
+
+#aboutMe img {
+	width: 40vh;
+	height: 40vh;
+	border-radius: 3em;
+	padding: 1em;
+}
+
+
+/* div aboutMe text lineup*/
+
+#meBlock {
+	display: flex;
+	/*background-color: rgba(255, 255, 255, .15);*/
+	justify-content: center;
+	flex-wrap: wrap;
+	transform: translateY(3vh);
+	/*border: solid red 2px;*/
+}
+
+#aboutmeLineUp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* Javascript */
+
